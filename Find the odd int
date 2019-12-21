@@ -1,0 +1,15 @@
+Given an array you need to find the element which appears odd number of times 
+
+
+function findOdd (arr){
+	let counts = {}
+	for (var i=0; i<arr.length; i++){
+	counts[arr[i]]=1+(counts[arr[i]] || 0); 
+	}
+
+	for (let p in counts){
+		if (counts[p]%2!==0){
+			return parseInt(p); 
+		}
+	}
+}
