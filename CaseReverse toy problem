@@ -1,0 +1,28 @@
+// Below is a function that is intended to take in a string, reverse the case of every character, and return the new string with cases flipped.
+
+// The function is currently broken, not working properly.
+
+// Your goal is to resolve the bugs without substantially altering the intended approach for solving the problem. 
+
+//test data
+//'This Is An Example' becomes 'tHIS iS aN eXAMPLE'
+//'boB rOss IS thE OrIgInAl GanGster' Becomes 'BOb RoSS is THe oRiGiNaL gANgSTER'
+
+
+function caseReverse(str) {
+  var strArray = str.split(' ');
+  for (var i=0; i<strArray.length; i++) {
+		var tempArr = strArray[i].split('');
+    for (var m=0; m<tempArr.length; m++){
+			if (tempArr[m]==tempArr[m].toUpperCase()){
+				tempArr[m]=tempArr[m].toLowerCase();
+				strArray[i]=tempArr.join(''); 
+			}
+			else tempArr[m]=tempArr[m].toUpperCase(); 
+			strArray[i]=tempArr.join(''); 
+		}
+  }
+  return strArray.join(' '); 
+}
+
+console.log(caseReverse('boB rOss IS thE OrIgInAl GanGster'));   //  BOb RoSS is THe oRiGiNaL gANgSTER
