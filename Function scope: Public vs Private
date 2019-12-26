@@ -1,0 +1,20 @@
+
+
+
+function Account (){
+	var name = 'Name is public'; 
+	var password = 'Password is private'; 
+
+	function getPassword () {
+		return password; 
+	}
+
+	this.getPasswordUsingThis = function () {
+		return password; 
+	}
+}
+
+
+var checkingAccount = new Account(); 
+//checkingAccount.getPassword(); // not definied, no access it is a private. 
+checkingAccount.getPasswordUsingThis(); // we get "Password is private" which is this keyword makes the scope public. 
