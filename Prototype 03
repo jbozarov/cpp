@@ -1,0 +1,22 @@
+Write a constructor function called User. This function should take in 4 parameters called name, age, email, 
+and savedPosts in that order. Name and email will be strings, age will be a number and savedPosts will be an 
+array of objects. These objects will each have 3 properties: id (a number), title (a string), and rating (a number 
+between 1 and 5). These objects are the posts that the user will have saved to their account. 
+
+Once the User constructor function is created, write a prototype method for the User function. Name this method 
+addSavedPost. It should take in three parameters: id (a number), title (a string) and rating (a number). Use 
+these parameters to create a new object and add it to the savedPosts array. Make sure to name the properties the 
+same as described previously (id, title, rating)
+
+
+
+function User (name, age, email, savedPosts){
+	this.name = name; 
+	this.age = age; 
+	this.email = email; 
+	this.savedPosts=savedPosts; 
+}
+
+User.prototype.addSavedPost = function (id, title, rating){
+	return this.savedPosts.push({id, title, rating})
+}
