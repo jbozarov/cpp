@@ -1,0 +1,28 @@
+Here we have a constructor function named User. It takes in 5 parameters, the last being an array of strings that 
+represent the user's friends. 
+
+Create a prototype method named addFriend that will take in a string parameter (a new friend) and add that string 
+to the user's friends array.
+
+Create a second prototype method named removeFriend that will take in a string parameter (the friend to be unfriended), 
+find that friend in the user's friends array and remove it from the array. (Don't worry about capitalization!)
+ 
+
+
+
+function User(name, age, hometown, email, friends) {
+  this.name = name;
+  this.age = age;
+  this.hometown = hometown;
+  this.email = email;
+  this.friends = friends;
+}
+
+User.prototype.addFriend=function(string){
+	return this.friends.push(string); 
+}; 
+
+User.prototype.removeFriend = function (string){
+	this.friends = this.friends.filter(val=>val!==string); 
+	return this.friends; 
+}; 
