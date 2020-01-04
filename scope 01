@@ -1,0 +1,56 @@
+//Based on the following set of functions, uncomment
+//the correct answers.
+
+var color = "grey"
+let weather = "foggy"
+
+function forecast(skyColor = color, cityWeather = weather){
+  return "The sky is " + skyColor + " and it is " + cityWeather + "."
+}
+
+function seattle(){
+    var color = "purple"
+    let weather = "stormy"
+    return forecast(color, weather)
+}
+
+function vancouver(){
+    let color = "iron grey"
+    let weather = "rainy"
+    return forecast()
+}
+
+function denver(color, weather){
+    return forecast(color, weather)
+}
+
+//What will seattle() return? Uncomment the correct answer.
+
+var seattleWeather = "The sky is purple and it is stormy."
+// var seattleWeather = "The sky is grey and it is foggy."
+// var seattleWeather = "The sky is undefined and it is undefined."
+
+
+//What will vancouver() return? Uncomment the correct answer.
+
+// var vancouverWeather = "The sky is purple and it is stormy."
+// var vancouverWeather = "The sky is iron grey and it is rainy."
+var vancouverWeather = "The sky is grey and it is foggy."
+// var vancouverWeather = "The sky is undefined and it is undefined."
+
+
+//What will denver() return? Uncomment the correct answer.
+
+// var denverWeather = "The sky is purple and it is stormy."
+// var denverWeather = "The sky is iron grey and it is rainy."
+var denverWeather = "The sky is grey and it is foggy."
+// var denverWeather = "The sky is undefined and it is undefined."
+
+
+//What will denver("blue", "sunny") return? Uncomment the correct answer.
+
+// var denverWeather2 = "The sky is purple and it is stormy."
+// var denverWeather2 = "The sky is iron grey and it is rainy."
+var denverWeather2 = "The sky is blue and it is sunny."
+// var denverWeather2 = "The sky is grey and it is foggy."
+// var denverWeather2 = "The sky is undefined and it is undefined."
