@@ -1,3 +1,4 @@
+
 //Reducer, action in redux: 
 
 
@@ -6,10 +7,21 @@ var state = {
 	number: 34
 }
 
-var action = {
+
+var action1 = {
 	type: 'name_changer', 
 	payload: 'Jahongir'
 }
+
+
+var action2 = {
+	type: 'increment'
+}
+
+var action3 = {
+	type: 'decrement'
+}
+
 
 function reducer (state, action) {
 	 switch(action.type) {
@@ -22,31 +34,26 @@ function reducer (state, action) {
 		 case 'increment' : {
 			 return {
 				 name: state.name,
-				 number: state.number+action.payload 
+				 number: state.number + 1
 			 }
 		 }
 		 case 'decrement' : {
 			 return {
 				 name: state.name, 
-				 number: state.number + action.payload  
+				 number: state.number - 1
 			 }
 		 }
 	 }
 }
-reducer (state, action); //{ number: 34, name: 'Jahongir' }
+
+var newState1 = reducer (state, action1); //{ number: 34, name: 'Jahongir' }
+var newState2 = reducer (state, action2); //{ number: 35, name: 'John' }
+var newState3 = reducer (state, action3); // { name: 'John', number: 33 }
 
 
+//KEEP in mind that reducer function returns new state which is different from old state. 
 
-var action2 = {
-	type: 'increment', 
-	payload: 1
-}
-reducer (state, action2); //{ number: 35, name: 'John' }
-
-
-
-var action3 = {
-	type: 'decrement', 
-	payload: -1
-}
-reducer (state, action3); // { name: 'John', number: 33 }
+newState1 === state // false 
+newState2 === state // false 
+newState3 === state // false 
+newState1 === newState2 // false 
