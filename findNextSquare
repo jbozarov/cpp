@@ -1,0 +1,4 @@
+function findNextSquare(sq) {
+  var res = Math.sqrt(sq); 
+  return Math.pow(res+1, 2)
+};
