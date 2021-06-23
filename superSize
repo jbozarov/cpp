@@ -1,4 +1,0 @@
-function superSize(num){
-  var arr = num.toString().split('').sort((a, b) => b-a); 
-  return Number(arr.join(''))
-}
