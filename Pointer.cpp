@@ -13,5 +13,8 @@ int main() {
 
   // Output the memory address of food with the pointer
   cout << ptr << endl;
+
+  // Let's get the value of the variable using pointer
+  cout << *ptr << endl; // Pizza
   return 0;
 }
