@@ -9,7 +9,7 @@ int main() {
   cout << food << "\n"; // Pizza
 
   cout << &food << "\n"; // memory address
-
+  
   cout << *ptr << "\n"; // Pizza
   
   *ptr = "Hamburger";
